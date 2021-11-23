@@ -33,7 +33,7 @@ const TableRow = (props) => {
     return(
     <tbody>
         {
-            props.list.map((student) => (
+            props.studentList.map((student) => (
             <tr key={student.id}>
                 <td>{student.id}</td>
                 <td>{student.firstName}</td>
@@ -79,9 +79,8 @@ const ShowStudentDetails = () => {
       </div>
         );
 
-    }
-    
-
+    }else
+    return ("");
 };
 
     return (
@@ -89,7 +88,7 @@ const ShowStudentDetails = () => {
             <h3>Student List</h3>
             <table className="table table-striped">
                 <TableHeader/> 
-                <TableRow list={studentList} />
+                <TableRow studentList={studentList} />
             </table>
             <br/>
             <ShowStudentDetails />
