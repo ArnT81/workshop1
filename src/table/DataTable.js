@@ -11,7 +11,7 @@ const DataTable = () => {
         {id: 5, firstName: "Towa", lastName: "Jämsborn", age: 56, birthDate: "1965-04-17", country: "Sweden", city: "Kalmar" }
     ];
     
-    const [studentList, setStudentList] = useState(initialData);
+    const [studentList] = useState(initialData);
     // showDetails state for displaying student details with a boolean,the button onclick function displayData returns a true value and the properties
     const [showDetails, setShowDetails] = useState(false);
     const studentDefaultData = {id: 0, firstName: "", lastName: "", age: 0, birthDate: "", country: "", city: "" }
@@ -19,7 +19,6 @@ const DataTable = () => {
 // function that returns table header
 const TableHeader = () => {
     return (
-      
     <thead className="table-light">
         <td>Id</td>
         <td>FirstName</td>
