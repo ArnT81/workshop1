@@ -11,12 +11,12 @@ const DataTable = () => {
         {id: 5, firstName: "Towa", lastName: "Jämsborn", age: 56, birthDate: "1965-04-17", country: "Sweden", city: "Kalmar" }
     ];
     
-    const [studentList] = useState(initialData);
+    const [studentList, setStudentList] = useState(initialData);
     // showDetails state for displaying student details with a boolean,the button onclick function displayData returns a true value and the properties
     const [showDetails, setShowDetails] = useState(false);
     const studentDefaultData = {id: 0, firstName: "", lastName: "", age: 0, birthDate: "", country: "", city: "" }
     const [student, setStudent] = useState(studentDefaultData);
-// function that returns table header
+// functionconponent that returns table header
 const TableHeader = () => {
     return (
     <thead className="table-light">
@@ -28,7 +28,7 @@ const TableHeader = () => {
     </thead>
     );
 };
-
+// functionconponent 
 const TableRow = (props) => {
     return(
     <tbody>
@@ -46,7 +46,7 @@ const TableRow = (props) => {
     </tbody>
     );
 };
-
+// functionconponent action 
 const TableAction = (props) => {
 
     const displayData = () => {
@@ -58,7 +58,7 @@ const TableAction = (props) => {
     return (<button type="button" className="btn btn-primary" onClick={displayData} >Details</button>);
 
 };
-
+// functionconponent 
 const ShowStudentDetails = () => {
 
     if(showDetails){
@@ -78,8 +78,7 @@ const ShowStudentDetails = () => {
           </div>
       </div>
         );
-    } else {
-        return ("");
+
     }
     
 
