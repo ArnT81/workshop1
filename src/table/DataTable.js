@@ -78,8 +78,6 @@ const ShowStudentDetails = () => {
           </div>
       </div>
         );
-
-    }else
     return ("");
 };
 
