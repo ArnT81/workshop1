@@ -63,6 +63,7 @@ export default function DataTable() {
 
     // functionconponent 
     const ShowStudentDetails = () => {
+        const { id, firstName, lastName, country, city, birthDate } = student;
         return (
             <>
                 {showDetails &&
@@ -71,10 +72,10 @@ export default function DataTable() {
                             Student Information
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title"> {student.country}: {student.city}</h5>
-                            <p className="card-text">ID: {student.id}</p>
-                            <p className="card-text">Name: {student.firstName} {student.lastName}</p>
-                            <p className="card-text">BirthDate: {student.birthDate}</p>
+                            <h5 className="card-title"> {country}: {city}</h5>
+                            <p className="card-text">ID: {id}</p>
+                            <p className="card-text">Name: {firstName} {lastName}</p>
+                            <p className="card-text">BirthDate: {birthDate}</p>
                         </div>
                         <div className="card-footer">
                             <button type="button" className="btn btn-info" onClick={() => { setShowDetails(false); setStudent(studentDefaultData) }}>Hide info</button>
